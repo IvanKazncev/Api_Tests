@@ -2,7 +2,7 @@ package Api;
 
 import java.util.Date;
 
-public class SuccesCreat {
+public class SuccesCreate {
     private String name;
     private String job;
     private String id;

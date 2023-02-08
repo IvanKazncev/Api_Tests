@@ -46,14 +46,14 @@ public class FirstApiTests {
     public void createCheck(){
         Specifications.installSpec(Specifications.responseSpecification());
         CreatData api = new CreatData("morpheus","leader");
-        SuccesCreat succesCreat = given()
+        SuccesCreate succesCreate = given()
                 .body(api)
                 .when()
                 .contentType(ContentType.JSON)
                 .post(URL+"api/users")
                 .then().log().all()
-                .extract().as(SuccesCreat.class);
-        Assert.assertEquals(api.getName(),succesCreat.getName());
+                .extract().as(SuccesCreate.class);
+        Assert.assertEquals(api.getName(), succesCreate.getName());
 
     }
 
